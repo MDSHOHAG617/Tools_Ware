@@ -11,8 +11,8 @@ const Tools = () => {
   }, []);
   return (
     <div>
-      tools : {tools.name}
-      {tools.map((tool) => console.log(tool))}
+      tools : {tools.length}
+      {/* {tools.map((tool) => console.log(tool))} */}
     </div>
   );
 };
