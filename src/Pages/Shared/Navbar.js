@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div class="navbar bg-secondary ">
+    <div class="navbar p-3 bg-gradient-to-r from-green-200 to-blue-200 hover:from-pink-200 hover:to-lime-200 ">
       <div class="navbar-start">
         <div class="dropdown">
           <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -48,7 +48,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a class="btn btn-ghost normal-case text-xl">Tools-ware</a>
+        <a class="m-0 lg:ml-20 btn btn-ghost normal-case text-xl">Tools-ware</a>
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal p-0">

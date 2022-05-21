@@ -14,7 +14,10 @@ const NotFound = () => {
           src="https://cdn.dribbble.com/users/932640/screenshots/2470471/jq.gif"
           alt=""
         />
-        <button onClick={backToHome} className="btn btn-md">
+        <button
+          onClick={backToHome}
+          className="btn btn-md btn-outline btn-error "
+        >
           {" "}
           back to home
         </button>
