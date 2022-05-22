@@ -11,7 +11,7 @@ const Tools = () => {
   }, []);
   return (
     <div className="">
-      <h1 class="text-5xl font-bold mt-10">Tools</h1>
+      <h1 className="text-5xl font-bold mt-10">Tools</h1>
       <div
         className="grid grid-cols-1
     lg:grid-cols-3  gap-3 my-10 "
