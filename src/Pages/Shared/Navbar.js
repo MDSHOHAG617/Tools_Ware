@@ -9,8 +9,9 @@ const Navbar = () => {
   const logout = () => {
     signOut(auth);
   };
+  console.log(user);
   return (
-    <div className="navbar p-3 bg-gradient-to-r from-green-200 to-blue-200 hover:from-pink-200 hover:to-lime-200 ">
+    <div className="navbar p-2 bg-gradient-to-r from-green-200 to-blue-200 hover:from-pink-200 hover:to-lime-200 ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabindex="0" className="btn btn-ghost lg:hidden">
@@ -52,9 +53,22 @@ const Navbar = () => {
             </li>
             <li>
               {user ? (
-                <button onClick={logout} className="btn btn-ghost">
-                  Sign out
-                </button>
+                <div className="">
+                  <div className="flex  items-center  ">
+                    <p className=" ">{user.displayName}</p>
+                    <div
+                      class="avatar online 
+                  "
+                    >
+                      <div class="w-12 ml-1 rounded-full">
+                        <img src={user.photoURL} alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <button onClick={logout} className="btn btn-ghost">
+                    Sign out
+                  </button>
+                </div>
               ) : (
                 <NavLink to="/login">Login</NavLink>
               )}
@@ -86,9 +100,22 @@ const Navbar = () => {
           </li>
           <li>
             {user ? (
-              <button onClick={logout} className="btn btn-ghost">
-                Sign out
-              </button>
+              <div className="">
+                <div className="flex  items-center  ">
+                  <p className="btn btn-ghost">{user.displayName}</p>
+                  <div
+                    class="avatar online 
+                  "
+                  >
+                    <div class="w-12 rounded-full">
+                      <img src={user.photoURL} alt="" />
+                    </div>
+                  </div>
+                </div>
+                <button onClick={logout} className="btn btn-ghost">
+                  Sign out
+                </button>
+              </div>
             ) : (
               <NavLink to="/login">Login</NavLink>
             )}

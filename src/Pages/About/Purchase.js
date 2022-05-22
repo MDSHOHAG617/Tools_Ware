@@ -1,10 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import ToolsItem from "./ToolsItem";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Link, useParams } from "react-router-dom";
+import auth from "../../firebase.init";
 
 const Purchase = () => {
+  const [user, loading, error] = useAuthState(auth);
   const { id } = useParams();
   const [tools, setTools] = useState({});
+  const {
+    name,
+    img,
+    desc,
+    min_order_quantity,
+    available_quantity,
+    price,
+    _id,
+  } = tools;
 
   useEffect(() => {
     fetch(`http://localhost:5000/tool/${id}`)
@@ -13,47 +24,69 @@ const Purchase = () => {
   }, [id]);
   return (
     <div>
-      welcome to purchase
-      <p>purchase for : {id}</p>
-      <div class="hero min-h-screen bg-base-200">
-        <div class="hero-content flex-col lg:flex-row-reverse">
-          <div class="text-center lg:text-left">
-            <h1 class="text-5xl font-bold">Login now!</h1>
-            <p class="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+      <div class="  ">
+        <div class=" grid  lg:grid-cols-2   ">
+          <div className="card flex-shrink-0 w-full max-w-sm  mx-auto">
+            <figure className=" ">
+              <img src={img} className="rounded-xl" alt="" />
+            </figure>
+            <div className="card-body items-center text-center">
+              <h2 className="card-title">{name}</h2>
+              <p>{desc}</p>
+              <p>Minimum Order Quantity : {min_order_quantity}</p>
+              <p>Available Quantity : {available_quantity}</p>
+              <p>
+                <span className="font-mono">Price : {price}</span>
+              </p>
+              <div className="card-actions"></div>
+            </div>
           </div>
-          <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <div class="card-body">
+          <div class="card flex-shrink-0 w-full max-w-sm  mx-auto ">
+            <div class="card-body ">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Name</span>
+                </label>
+                <input
+                  type="text"
+                  value={user.displayName}
+                  disabled
+                  class="input input-bordered"
+                />
+              </div>
               <div class="form-control">
                 <label class="label">
                   <span class="label-text">Email</span>
                 </label>
                 <input
                   type="text"
-                  placeholder="email"
+                  value={user.email}
+                  disabled
                   class="input input-bordered"
                 />
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Your Address</span>
+                  </label>
+                  <textarea
+                    class="textarea textarea-bordered h-24"
+                    placeholder="Address"
+                  ></textarea>
+                </div>
+                <label class="label"></label>
               </div>
               <div class="form-control">
                 <label class="label">
-                  <span class="label-text">Password</span>
+                  <span class="label-text">Phone</span>
                 </label>
                 <input
-                  type="text"
-                  placeholder="password"
+                  type="number"
+                  placeholder="your phone "
                   class="input input-bordered"
                 />
-                <label class="label">
-                  <a href="#" class="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
               </div>
               <div class="form-control mt-6">
-                <button class="btn btn-primary">Login</button>
+                <button class="btn text-white ">place the order</button>
               </div>
             </div>
           </div>
