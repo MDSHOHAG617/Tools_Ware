@@ -6,11 +6,11 @@ const BusinessSummary = () => {
       <div class="hero mt-10 ">
         <div class=" ">
           <div class="">
-            <h1 class="text-5xl font-bold">About Us </h1>
+            <h1 class="text-5xl font-bold my-10 ">Business Summary </h1>
 
             {/* cards */}
-            <div className="cards my-10 grid grid-cols-1 lg:grid-cols-3 gap-5">
-              <div class="card w-96 bg-lime-200  text-neutral-content">
+            <div className="cards my-16 grid grid-cols-1 lg:grid-cols-4 gap-8 ">
+              <div class="card w-64 bg-lime-200  text-neutral-content mx-auto">
                 <div class="card-body hover:bg-pink-100 items-center text-center">
                   <img
                     className="w-20"
@@ -26,7 +26,7 @@ const BusinessSummary = () => {
                   <div class="card-actions justify-end"></div>
                 </div>
               </div>
-              <div class="card w-96 hover:bg-pink-100 bg-sky-300 text text-neutral-content">
+              <div class="card w-64 mx-auto hover:bg-pink-100 bg-sky-300 text text-neutral-content">
                 <div class="card-body items-center text-center">
                   <img
                     className="w-20"
@@ -42,7 +42,7 @@ const BusinessSummary = () => {
                   <div class="card-actions justify-end"></div>
                 </div>
               </div>
-              <div class="card w-96 bg-yellow-300 text-neutral-content">
+              <div class="card w-64 mx-auto bg-yellow-300 text-neutral-content">
                 <div class="card-body items-center text-center hover:bg-pink-100">
                   <img
                     className="w-20"
@@ -50,6 +50,20 @@ const BusinessSummary = () => {
                     alt=""
                   />
                   <h2 className="card-title text-primary">33K+ Reviews</h2>
+                  <p className="text-primary font-thin">
+                    We always try our best for serve an customer
+                  </p>
+                  <div class="card-actions justify-end"></div>
+                </div>
+              </div>
+              <div class="card w-64  mx-auto bg-blue-200 text-neutral-content">
+                <div class="card-body items-center text-center hover:bg-pink-100 ">
+                  <img
+                    className="w-20"
+                    src="https://cdn-icons-png.flaticon.com/512/69/69886.png"
+                    alt=""
+                  />
+                  <h2 className="card-title text-primary">50+ tools</h2>
                   <p className="text-primary font-thin">
                     We always try our best for serve an customer
                   </p>
