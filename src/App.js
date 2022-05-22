@@ -14,15 +14,22 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route
+        {/* <Route
           path="/purchase"
           element={
             <RequireAuth>
               <Purchase />
             </RequireAuth>
           }
+        /> */}
+        <Route
+          path="/purchase/:id"
+          element={
+            <RequireAuth>
+              <Purchase />
+            </RequireAuth>
+          }
         />
-        <Route path="/purchase/:id" element={<Purchase />} />
         <Route path="/login" element={<Login></Login>} />
         <Route path="/signup" element={<SignUp></SignUp>} />
         <Route path="/blogs" element={<></>} />

@@ -52,7 +52,9 @@ const SignUp = () => {
 
   //   if (token) {
   //   }
-  navigate("/purchase");
+  if (user || gUser) {
+    navigate("/");
+  }
 
   const onSubmit = async (data) => {
     await createUserWithEmailAndPassword(data.email, data.password);

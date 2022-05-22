@@ -27,7 +27,7 @@ const Tool = ({ tool }) => {
           </p>
           <div className="card-actions">
             <Link to={`purchase/${_id}`} className="btn btn-primary">
-              Parches
+              Purchase
             </Link>
           </div>
         </div>
