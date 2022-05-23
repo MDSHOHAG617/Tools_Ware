@@ -76,7 +76,7 @@ const Reviews = () => {
             </div>
           </div>
         </div>
-        <div class="card card-side hover:bg-slate-200 bg-pink-300 shadow-xl">
+        <div class="card card-side hover:bg-slate-200 bg-cyan-100 shadow-xl">
           <figure>
             <img
               className="w-28 rounded-xl ml-3"
@@ -111,7 +111,7 @@ const Reviews = () => {
             </div>
           </div>
         </div>
-        <div class="card card-side hover:bg-slate-200 bg-red-200 shadow-xl">
+        <div class="card card-side hover:bg-slate-200 bg-cyan-200 shadow-xl">
           <figure>
             <img
               className="w-28 rounded-xl ml-3"

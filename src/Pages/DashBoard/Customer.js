@@ -25,7 +25,6 @@ const Customer = ({ customer }) => {
   };
   return (
     <tr>
-      <th>{+1}</th>
       <td>{_id}</td>
       <td>{email}</td>
       <td>

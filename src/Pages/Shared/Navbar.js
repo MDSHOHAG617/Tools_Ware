@@ -82,18 +82,13 @@ const Navbar = () => {
           Tools-ware
         </a>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-end hidden lg:flex justify-end lg:ml-[500px]">
         <ul className="menu menu-horizontal p-0">
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
-
-          {/* <li>
-            <NavLink to="/purchases">Purchase</NavLink>
-          </li> */}
-
           <li>
-            <NavLink to="/portfolio">My Portfolio</NavLink>
+            <NavLink to="/portfolio"> Portfolio</NavLink>
           </li>
           <li>
             <NavLink to="/blogs">Blogs</NavLink>
@@ -112,7 +107,7 @@ const Navbar = () => {
                     class="avatar online 
                   "
                   >
-                    <div class="w-12 rounded-full">
+                    <div class="w-12 rounded-full mr-4">
                       <img src={user.photoURL} alt="" />
                     </div>
                   </div>

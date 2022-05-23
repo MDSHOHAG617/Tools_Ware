@@ -16,6 +16,7 @@ import "react-toastify/dist/ReactToastify.css";
 import MyProfile from "./Pages/DashBoard/MyProfile";
 import AllCustomers from "./Pages/DashBoard/AllCustomers";
 import RequireAdmin from "./Pages/Login/RequireAdmin";
+import Blogs from "./Pages/Blogs";
 
 function App() {
   return (
@@ -54,8 +55,8 @@ function App() {
 
         <Route path="/login" element={<Login></Login>} />
         <Route path="/signup" element={<SignUp></SignUp>} />
-        <Route path="/blogs" element={<></>} />
         <Route path="/portfolio" element={<Portfolio></Portfolio>} />
+        <Route path="/blogs" element={<Blogs></Blogs>} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>
