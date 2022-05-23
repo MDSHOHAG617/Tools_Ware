@@ -43,9 +43,6 @@ const Navbar = () => {
             </li> */}
 
             <li>
-              <NavLink to="/dashboard">DashBoard</NavLink>
-            </li>
-            <li>
               <NavLink to="/portfolio">My Portfolio</NavLink>
             </li>
             <li>
@@ -53,7 +50,12 @@ const Navbar = () => {
             </li>
             <li>
               {user ? (
-                <div className="">
+                <>
+                  <div>
+                    <li className="ml-[-18px]">
+                      <NavLink to="/dashboard">DashBoard</NavLink>
+                    </li>
+                  </div>
                   <div className="flex  items-center  ">
                     <p className=" ">{user.displayName}</p>
                     <div
@@ -68,7 +70,7 @@ const Navbar = () => {
                   <button onClick={logout} className="btn btn-ghost">
                     Sign out
                   </button>
-                </div>
+                </>
               ) : (
                 <NavLink to="/login">Login</NavLink>
               )}
@@ -90,9 +92,6 @@ const Navbar = () => {
           </li> */}
 
           <li>
-            <NavLink to="/dashboard">DashBoard</NavLink>
-          </li>
-          <li>
             <NavLink to="/portfolio">My Portfolio</NavLink>
           </li>
           <li>
@@ -101,6 +100,11 @@ const Navbar = () => {
           <li>
             {user ? (
               <div className="">
+                <div>
+                  <li className="ml-[-18px]">
+                    <NavLink to="/dashboard">DashBoard</NavLink>
+                  </li>
+                </div>
                 <div className="flex  items-center  ">
                   <p className="btn btn-ghost">{user.displayName}</p>
                   <div
