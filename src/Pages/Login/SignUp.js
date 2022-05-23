@@ -1,11 +1,3 @@
-// import React from "react";
-
-// const SignUp = () => {
-//   return <div></div>;
-// };
-
-// export default SignUp;
-
 import React from "react";
 import {
   useCreateUserWithEmailAndPassword,
@@ -16,7 +8,7 @@ import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import Loading from "../Shared/Loading";
 import { Link, useNavigate } from "react-router-dom";
-// import useToken from "../../hooks/useToken";
+import useToken from "../../hooks/useToken";
 
 const SignUp = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -30,7 +22,7 @@ const SignUp = () => {
 
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
-  //   const [token] = useToken(user || gUser);
+  const [token] = useToken(user || gUser);
 
   const navigate = useNavigate();
 
@@ -50,9 +42,7 @@ const SignUp = () => {
     );
   }
 
-  //   if (token) {
-  //   }
-  if (user || gUser) {
+  if (token) {
     navigate("/");
   }
 
