@@ -11,7 +11,7 @@ const Navbar = () => {
   };
   console.log(user);
   return (
-    <div className="navbar p-2 bg-gradient-to-r from-green-200 to-blue-200 hover:from-pink-200 hover:to-lime-200 ">
+    <div className="navbar p-2 bg-gradient-to-r from-green-200 to-blue-200  ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabindex="0" className="btn btn-ghost lg:hidden">
