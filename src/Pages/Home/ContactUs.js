@@ -22,7 +22,12 @@ const ContactUs = () => {
               your afford will make us proud.Make mock test with us, it will be
               fun. ❤️
             </p>
-            <button class="btn btn-primary">Set a test</button>
+            <a
+              href="https://mail.google.com/mail/u/0/#inbox"
+              class="btn btn-primary"
+            >
+              Set a test
+            </a>
           </div>
         </div>
       </div>

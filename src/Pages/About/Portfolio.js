@@ -322,27 +322,80 @@ const Portfolio = () => {
                 </a>
               </li>
             </p>
-            <button class="btn btn-lg  ">
-              <div className=" ">
-                <a
-                  className="flex justify-center items-center"
-                  href="https://www.facebook.com/profile.php?id=100004130176262"
-                >
-                  Knock me on{" "}
-                  <img
-                    className="w-12 mx-2"
-                    src="https://img.icons8.com/fluency/344/facebook-new.png"
-                    alt=""
-                  />
-                  for hire me{" "}
-                  <div class="avatar">
-                    <div class="w-12 ml-3 mask mask-circle">
-                      <img src={icon} alt="" />
+            <div className="grid grid-cols-1 lg:grid-cols-1 gap-2">
+              <button class="btn btn-lg btn-info">
+                <div className=" ">
+                  <a
+                    className="flex justify-center items-center"
+                    href="https://www.facebook.com/profile.php?id=100004130176262"
+                  >
+                    Knock me on{" "}
+                    <img
+                      className="w-12 mx-2"
+                      src="https://img.icons8.com/fluency/344/facebook-new.png"
+                      alt=""
+                    />
+                    to hire me{" "}
+                    <div class="avatar">
+                      <div class="w-12 ml-3 mask mask-circle">
+                        <img
+                          src="https://scontent.fdac15-1.fna.fbcdn.net/v/t39.30808-6/277167251_2219883851492599_654433035876123528_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHK5jI929stR6Fycnu8NfpVNrJgWhj4L3Y2smBaGPgvdrdyq-Coy0C12tXD-CzAvZJO_ijJMcdHH5nsJeqNyVYi&_nc_ohc=Itt0RN1BG9oAX_t8Ewi&_nc_ht=scontent.fdac15-1.fna&oh=00_AT_kkP32qzcRu1FpPe6TrFaXHY1qT5pRZA2L_CKvmh5nZg&oe=628FFAD0"
+                          alt=""
+                        />
+                      </div>
                     </div>
-                  </div>
-                </a>{" "}
-              </div>
-            </button>
+                  </a>{" "}
+                </div>
+              </button>
+              <button class="btn btn-lg   ">
+                <div className=" ">
+                  <a
+                    className="flex justify-center items-center"
+                    href="https://www.linkedin.com/in/md-shohag-034bb6190/"
+                  >
+                    Knock me on{" "}
+                    <img
+                      className="w-12 mx-2"
+                      src="https://img.icons8.com/color/2x/linkedin-circled.png"
+                      alt=""
+                    />
+                    to hire me{" "}
+                    <div class="avatar">
+                      <div class="w-12 ml-3 mask mask-circle">
+                        <img
+                          src="https://media-exp1.licdn.com/dms/image/C5603AQGTb5E_oiIbMQ/profile-displayphoto-shrink_200_200/0/1594137809289?e=1658966400&v=beta&t=6EZ92_IM2AsLatZbSKNICLQ8DYJa-AuedBU5WDfZ9U0"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </a>{" "}
+                </div>
+              </button>
+              <button class="btn btn-lg  btn-success">
+                <div className=" ">
+                  <a
+                    className="flex justify-center items-center"
+                    href="https://twitter.com/cr007_jb"
+                  >
+                    Knock me on{" "}
+                    <img
+                      className="w-12 mx-2"
+                      src="https://img.icons8.com/color/2x/twitter.png"
+                      alt=""
+                    />
+                    to hire me{" "}
+                    <div class="avatar">
+                      <div class="w-12 ml-3 mask mask-circle">
+                        <img
+                          src="https://pbs.twimg.com/profile_images/1499152225372762115/ygAuNqac_400x400.jpg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </a>{" "}
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
