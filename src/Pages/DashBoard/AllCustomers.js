@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useQuery } from "react-query";
-import Loading from "../Shared/Loading";
 import Customer from "./Customer";
 
 const AllCustomers = () => {
@@ -31,17 +29,7 @@ const AllCustomers = () => {
           </thead>
           <tbody>
             {customers.map((customer, index) => (
-              <tr>
-                <th>{index + 1}</th>
-                <td>{customer._id}</td>
-                <td>{customer.email}</td>
-                <td>
-                  <button class="btn btn-xs">make admin</button>
-                </td>
-                <td>
-                  <button class="btn btn-xs">Remove Customer</button>
-                </td>
-              </tr>
+              <Customer key={customer._id} customer={customer}></Customer>
             ))}
           </tbody>
         </table>

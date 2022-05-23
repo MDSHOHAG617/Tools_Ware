@@ -15,6 +15,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MyProfile from "./Pages/DashBoard/MyProfile";
 import AllCustomers from "./Pages/DashBoard/AllCustomers";
+import RequireAdmin from "./Pages/Login/RequireAdmin";
 
 function App() {
   return (
@@ -22,14 +23,6 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route
-          path="/purchase"
-          element={
-            <RequireAuth>
-              <Purchase />
-            </RequireAuth>
-          }
-        /> */}
         <Route
           path="/purchase/:id"
           element={
@@ -51,7 +44,11 @@ function App() {
           <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
           <Route
             path="allCustomers"
-            element={<AllCustomers></AllCustomers>}
+            element={
+              <RequireAdmin>
+                <AllCustomers></AllCustomers>
+              </RequireAdmin>
+            }
           ></Route>
         </Route>
 

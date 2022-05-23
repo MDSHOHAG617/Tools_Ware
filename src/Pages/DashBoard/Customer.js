@@ -1,24 +1,44 @@
 import React from "react";
+import { toast } from "react-toastify";
 
-const Customer = () => {
-  //   console.log(customer);
+const Customer = ({ customer }) => {
+  const { _id, email, role } = customer;
+  const makeAdmin = () => {
+    fetch(`http://localhost:5000/user/admin/${email}`, {
+      method: "PUT",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    })
+      .then((res) => {
+        if (res.status === 403) {
+          toast.error("Failed to make an admin");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        // console.log(data);
+        if (data.modifiedCount > 0) {
+          toast.success("Successfully made an admin");
+        }
+      });
+  };
   return (
-    <div>
-      {/* {" "}
-      <div class="overflow-x-auto">
-        <table class="table w-full">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>product</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div> */}
-    </div>
+    <tr>
+      <th>{+1}</th>
+      <td>{_id}</td>
+      <td>{email}</td>
+      <td>
+        {role !== "admin" && (
+          <button onClick={makeAdmin} class="btn btn-sm text-white btn-success">
+            Make admin
+          </button>
+        )}
+      </td>
+      <td>
+        <button class="btn btn-error btn-sm">remove user</button>
+      </td>
+    </tr>
   );
 };
 
