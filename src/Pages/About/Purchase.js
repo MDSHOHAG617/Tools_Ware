@@ -30,6 +30,7 @@ const Purchase = () => {
       customerEmail: user.email,
       userAddress,
       phone,
+      price,
     };
 
     fetch("http://localhost:5000/order", {
