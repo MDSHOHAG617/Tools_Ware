@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+import DeleteConfirmMOdal from "./DeleteConfirmMOdal";
 import OrdersRow from "./OrdersRow";
 
 const ManageProducts = () => {
   const [orders, setOrders] = useState([]);
+
+  const [deletingProducts, setDeletingProducts] = useState(null);
 
   useEffect(() => {
     fetch("http://localhost:5000/tool", {
@@ -36,11 +39,18 @@ const ManageProducts = () => {
                 key={order._id}
                 index={index}
                 order={order}
+                setDeletingProducts={setDeletingProducts}
               ></OrdersRow>
             ))}
           </tbody>
         </table>
       </div>
+      {deletingProducts && (
+        <DeleteConfirmMOdal
+          deletingProducts={deletingProducts}
+          setDeletingProducts={setDeletingProducts}
+        ></DeleteConfirmMOdal>
+      )}
     </div>
   );
 };
