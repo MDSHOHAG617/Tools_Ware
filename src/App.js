@@ -17,6 +17,7 @@ import MyProfile from "./Pages/DashBoard/MyProfile";
 import AllCustomers from "./Pages/DashBoard/AllCustomers";
 import RequireAdmin from "./Pages/Login/RequireAdmin";
 import Blogs from "./Pages/Blogs";
+import AddProduct from "./Pages/DashBoard/AddProduct";
 
 function App() {
   return (
@@ -43,6 +44,14 @@ function App() {
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path="review" element={<AddReview></AddReview>}></Route>
           <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
+          <Route
+            path="addProducts"
+            element={
+              <RequireAdmin>
+                <AddProduct></AddProduct>
+              </RequireAdmin>
+            }
+          ></Route>
           <Route
             path="allCustomers"
             element={
