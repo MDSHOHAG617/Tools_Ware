@@ -18,9 +18,12 @@ const OrdersRow = ({ order, index, setDeletingProducts }) => {
         <label
           onClick={() => setDeletingProducts(order)}
           for="delete-confirm-modal"
-          class="btn btn-sm btn-error"
         >
-          Delete
+          <img
+            className="w-8"
+            src="https://cdn-icons-png.flaticon.com/512/6861/6861362.png"
+            alt=""
+          />
         </label>
       </td>
     </tr>
