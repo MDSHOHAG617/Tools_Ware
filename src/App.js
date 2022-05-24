@@ -18,6 +18,7 @@ import AllCustomers from "./Pages/DashBoard/AllCustomers";
 import RequireAdmin from "./Pages/Login/RequireAdmin";
 import Blogs from "./Pages/Blogs";
 import AddProduct from "./Pages/DashBoard/AddProduct";
+import ManageProducts from "./Pages/DashBoard/ManageProducts";
 
 function App() {
   return (
@@ -49,6 +50,14 @@ function App() {
             element={
               <RequireAdmin>
                 <AddProduct></AddProduct>
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route
+            path="manageProducts"
+            element={
+              <RequireAdmin>
+                <ManageProducts></ManageProducts>
               </RequireAdmin>
             }
           ></Route>

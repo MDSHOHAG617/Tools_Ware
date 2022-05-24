@@ -10,7 +10,7 @@ const Navbar = () => {
     signOut(auth);
     localStorage.removeItem("accessToken");
   };
-  console.log(user);
+  // console.log(user);
   return (
     <div className="navbar p-2 bg-gradient-to-r from-green-200 to-blue-200  ">
       <div className="navbar-start">

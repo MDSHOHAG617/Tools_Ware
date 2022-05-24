@@ -1,13 +1,12 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const AddProduct = () => {
-  const navigate = useNavigate();
   const handleAddItems = (event) => {
     event.preventDefault();
     const img = event.target.url.value;
     const name = event.target.name.value;
+    const email = event.target.email.value;
     const price = event.target.price.value;
     const min_order_quantity = event.target.Quantity.value;
     const available_quantity = event.target.supplier.value;
@@ -17,6 +16,7 @@ const AddProduct = () => {
       img,
       name,
       price,
+      email,
       min_order_quantity,
       available_quantity,
       desc,
@@ -33,8 +33,6 @@ const AddProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         toast.success("Product added successfully");
-        // navigate("/");
-        Items("");
       });
   };
   return (
@@ -42,7 +40,14 @@ const AddProduct = () => {
       <form onSubmit={handleAddItems}>
         <div class="card flex-shrink-0 w-full max-w-sm lg:max-w-md  shadow-2xl  mx-auto">
           <div class="card-body">
-            <h2 className="font-bold text-xl mb-4">Add a Product</h2>
+            <h2 className=" text-xl mb-4">Add a Product</h2>
+            <input
+              className="p-2 bg  w-50   bg-sky-100 rounded"
+              required
+              type="email"
+              placeholder="Insert your email"
+              name="email"
+            />
             <input
               className="p-2 bg  w-50   bg-sky-100 rounded"
               required
