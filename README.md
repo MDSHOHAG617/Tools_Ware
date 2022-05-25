@@ -2,7 +2,7 @@
 
 ## [site Link]
 
-### Features and functionality :
+### Features and functionality
 
 - used Auth state to maintain the login and sign up
 - Used JWT token for verify user
