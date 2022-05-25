@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import CheckoutForm from "./CheckoutForm";
 
 const stripePromise = loadStripe(
-  "pk_test_51L1XPtAKPn8xk6KREJGFJCE114R5OBzhaRgucW30fy9HBpfBOLdnUXAsjdf3qP9gQ85h67NUpQzGJcg2C8E5Q2au009d7jkPud"
+  "pk_test_51L3KfkFGPDN7K9HspNJBoTXbeh9iGrhCuyRNAlxtfA21FGV8eR8S0eYp5Js97Cl2hSg5yDMrz1yf4cFaih5FMpBR00MfOjuCsi"
 );
 
 const Payment = () => {
@@ -21,7 +21,7 @@ const Payment = () => {
     })
       .then((res) => res.json())
       .then((data) => setPayments(data));
-  }, [url]);
+  }, [payments]);
 
   return (
     <div>
