@@ -5,7 +5,7 @@ const Tools = () => {
   const [tools, setTools] = useState([]);
   console.log(tools);
   useEffect(() => {
-    fetch("http://localhost:5000/tool")
+    fetch("https://fathomless-garden-42374.herokuapp.com/tool")
       .then((res) => res.json())
       .then((data) => setTools(data));
   }, []);

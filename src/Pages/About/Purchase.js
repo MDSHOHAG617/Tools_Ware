@@ -33,7 +33,7 @@ const Purchase = () => {
       price,
     };
 
-    fetch("http://localhost:5000/order", {
+    fetch("https://fathomless-garden-42374.herokuapp.com/order", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -48,7 +48,7 @@ const Purchase = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/tool/${id}`)
+    fetch(`https://fathomless-garden-42374.herokuapp.com/tool/${id}`)
       .then((res) => res.json())
       .then((data) => setTools(data));
   }, [id]);

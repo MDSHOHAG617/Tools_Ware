@@ -5,7 +5,7 @@ const AllCustomers = () => {
   const [customers, setCustomers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/user", {
+    fetch("https://fathomless-garden-42374.herokuapp.com/user", {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

@@ -22,7 +22,7 @@ const AddProduct = () => {
       desc,
     };
 
-    fetch("http://localhost:5000/tool", {
+    fetch("https://fathomless-garden-42374.herokuapp.com/tool", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -8,7 +8,7 @@ const ManageProducts = () => {
   const [deletingProducts, setDeletingProducts] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/tool", {
+    fetch("https://fathomless-garden-42374.herokuapp.com/tool", {
       headers: {
         "content-type": "application/json",
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

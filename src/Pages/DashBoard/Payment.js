@@ -11,7 +11,7 @@ const stripePromise = loadStripe(
 const Payment = () => {
   const { id } = useParams();
   const [payments, setPayments] = useState([]);
-  const url = `http://localhost:5000/order/${id}`;
+  const url = `https://fathomless-garden-42374.herokuapp.com/order/${id}`;
   useEffect(() => {
     fetch(url, {
       method: "GET",
