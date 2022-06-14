@@ -2,6 +2,11 @@
 
 ## [https://tools-ware.web.app/]
 
+## Admin Credentials :
+
+- Email : soto@shakil.com
+- Password : 123456
+
 ### Features and functionality
 
 - used Auth state to maintain the login and sign up
