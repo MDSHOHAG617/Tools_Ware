@@ -8,7 +8,7 @@ const ManageProducts = () => {
   const [deletingProducts, setDeletingProducts] = useState(null);
 
   useEffect(() => {
-    fetch("https://fathomless-garden-42374.herokuapp.com/tool", {
+    fetch("https://toolsware.onrender.com/tool", {
       headers: {
         "content-type": "application/json",
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

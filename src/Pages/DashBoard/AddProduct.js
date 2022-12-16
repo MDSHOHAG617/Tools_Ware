@@ -22,7 +22,7 @@ const AddProduct = () => {
       desc,
     };
 
-    fetch("https://fathomless-garden-42374.herokuapp.com/tool", {
+    fetch("https://toolsware.onrender.com/tool", {
       method: "POST",
       headers: {
         "content-type": "application/json",

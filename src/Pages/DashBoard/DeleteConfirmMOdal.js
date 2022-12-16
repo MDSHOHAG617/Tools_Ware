@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 
 const DeleteConfirmMOdal = ({ deletingProducts, setDeletingProducts }) => {
   const handleDelete = () => {
-    fetch(`https://fathomless-garden-42374.herokuapp.com/tool/${email}`, {
+    fetch(`https://toolsware.onrender.com/tool/${email}`, {
       method: "DELETE",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

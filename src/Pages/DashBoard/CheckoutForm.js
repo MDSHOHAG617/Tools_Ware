@@ -23,7 +23,7 @@
 //   }
 
 //   useEffect(() => {
-//     fetch("https://fathomless-garden-42374.herokuapp.com/create-payment-intent", {
+//     fetch("https://toolsware.onrender.com/create-payment-intent", {
 //       method: "POST",
 //       headers: {
 //         "content-type": "application/json",
@@ -86,7 +86,7 @@
 //         order: orderId,
 //         transactionId: paymentIntent.id,
 //       };
-//       fetch(`https://fathomless-garden-42374.herokuapp.com/order/${orderId}`, {
+//       fetch(`https://toolsware.onrender.com/order/${orderId}`, {
 //         method: "PATCH",
 //         headers: {
 //           "content-type": "application/json",
@@ -160,19 +160,16 @@ const CheckoutForm = ({ payments }) => {
   const { _id, price, customerEmail, customerName } = payments;
 
   useEffect(() => {
-    // fetch("https://fathomless-garden-42374.herokuapp.com/create-payment-intent", {
+    // fetch("https://toolsware.onrender.com/create-payment-intent", {
     if (price) {
-      fetch(
-        "https://fathomless-garden-42374.herokuapp.com/create-payment-intent",
-        {
-          method: "POST",
-          headers: {
-            "content-type": "application/json",
-            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-          },
-          body: JSON.stringify({ price }),
-        }
-      )
+      fetch("https://toolsware.onrender.com/create-payment-intent", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+        body: JSON.stringify({ price }),
+      })
         .then((res) => res.json())
         .then((data) => {
           if (data?.clientSecret) {
@@ -226,7 +223,7 @@ const CheckoutForm = ({ payments }) => {
         order: _id,
         transactionId: paymentIntent.id,
       };
-      fetch(`https://fathomless-garden-42374.herokuapp.com/order/${_id}`, {
+      fetch(`https://toolsware.onrender.com/order/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",

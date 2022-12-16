@@ -12,7 +12,7 @@ const MyOrders = () => {
   useEffect(() => {
     if (user) {
       fetch(
-        `https://fathomless-garden-42374.herokuapp.com/order?customerEmail=${user.email}`,
+        `https://toolsware.onrender.com/order?customerEmail=${user.email}`,
         {
           method: "GET",
           headers: {

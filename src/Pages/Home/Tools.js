@@ -5,7 +5,7 @@ const Tools = () => {
   const [tools, setTools] = useState([]);
   console.log(tools);
   useEffect(() => {
-    fetch("https://fathomless-garden-42374.herokuapp.com/tool")
+    fetch("https://toolsware.onrender.com/tool")
       .then((res) => res.json())
       .then((data) => setTools(data));
   }, []);

@@ -33,7 +33,7 @@ const Purchase = () => {
       price,
     };
 
-    fetch("https://fathomless-garden-42374.herokuapp.com/order", {
+    fetch("https://toolsware.onrender.com/order", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -48,7 +48,7 @@ const Purchase = () => {
   };
 
   useEffect(() => {
-    fetch(`https://fathomless-garden-42374.herokuapp.com/tool/${id}`)
+    fetch(`https://toolsware.onrender.com/tool/${id}`)
       .then((res) => res.json())
       .then((data) => setTools(data));
   }, [id]);
