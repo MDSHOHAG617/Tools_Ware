@@ -44,9 +44,9 @@ function App() {
           }
         >
           <Route index element={<MyOrders></MyOrders>}></Route>
-          <Route path="review" element={<AddReview></AddReview>}></Route>
+          {/* <Route path="review" element={<AddReview></AddReview>}></Route> */}
           <Route path="payment/:id" element={<Payment></Payment>}></Route>
-          <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
+          {/* <Route path="myProfile" element={<MyProfile></MyProfile>}></Route> */}
           <Route
             path="addProducts"
             element={
@@ -75,8 +75,8 @@ function App() {
 
         <Route path="/login" element={<Login></Login>} />
         <Route path="/signup" element={<SignUp></SignUp>} />
-        <Route path="/portfolio" element={<Portfolio></Portfolio>} />
-        <Route path="/blogs" element={<Blogs></Blogs>} />
+        {/* <Route path="/portfolio" element={<Portfolio></Portfolio>} />
+        <Route path="/blogs" element={<Blogs></Blogs>} /> */}
 
         <Route path="*" element={<NotFound />} />
       </Routes>

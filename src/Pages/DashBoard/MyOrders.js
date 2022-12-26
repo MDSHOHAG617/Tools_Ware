@@ -35,8 +35,8 @@ const MyOrders = () => {
 
   return (
     <div>
-      my orders :{orders.length}
-      <div class="overflow-x-auto">
+      {/* <span className="font-bold p-2">Your orders : {orders.length}</span> */}
+      <div class="overflow-x-auto ">
         <table class="table w-full">
           <thead>
             <tr>

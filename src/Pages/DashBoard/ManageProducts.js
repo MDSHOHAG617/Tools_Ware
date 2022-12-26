@@ -21,7 +21,7 @@ const ManageProducts = () => {
   }, []);
   return (
     <div>
-      manage orders : {orders.length}
+      {/* manage orders : {orders.length} */}
       <div class="overflow-x-auto">
         <table class="table w-full">
           <thead>

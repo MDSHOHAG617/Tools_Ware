@@ -43,12 +43,12 @@ const Navbar = () => {
               <NavLink to="/purchase">Purchase</NavLink>
             </li> */}
 
-            <li>
+            {/* <li>
               <NavLink to="/portfolio">My Portfolio</NavLink>
             </li>
             <li>
               <NavLink to="/blogs">Blogs</NavLink>
-            </li>
+            </li> */}
             <li>
               {user ? (
                 <>
@@ -87,12 +87,12 @@ const Navbar = () => {
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/portfolio"> Portfolio</NavLink>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <NavLink to="/blogs">Blogs</NavLink>
-          </li>
+          </li> */}
           <li>
             {user ? (
               <div className="">
